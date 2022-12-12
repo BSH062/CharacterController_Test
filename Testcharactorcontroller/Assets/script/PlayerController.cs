@@ -5,14 +5,16 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
-    private KeyCode jumpkeycode = KeyCode.Space;
+    //점프 == 스페이스바 
+    private KeyCode jumpkeycode = KeyCode.Space; 
+    //컴포넌트를 가져올곳
     private PlayerMove playerMove;
     void Start()
     {
-        playerMove = GetComponent<PlayerMove>();
+        //움직임과 점프 메소드를 가져오기 위해 컴포넌트 추가
+        playerMove = GetComponent<PlayerMove>(); 
     }
 
-    // Update is called once per frame
     void Update()
     {
         movement();
@@ -20,11 +22,11 @@ public class PlayerController : MonoBehaviour
 
     void movement()
     {
-        float x = Input.GetAxisRaw("Horizontal");//좌우
-        float z = Input.GetAxisRaw("Vertical");//상하
-
+        float x = Input.GetAxisRaw("Horizontal"); //좌우 유니티 제공 메소드
+        float z = Input.GetAxisRaw("Vertical");  //상하
+        //위에서 입력받은 값을 변수로 MoveTo 실행
         playerMove.MoveTo(new Vector3(x, 0, z));
-
+        //점프키를 눌렀을경우 점프 실행
         if (Input.GetKeyDown(jumpkeycode))
         {
             playerMove.JumpTo();
