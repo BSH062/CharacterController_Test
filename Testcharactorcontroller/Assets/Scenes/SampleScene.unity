@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -108,7 +108,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 51
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 4
@@ -282,7 +282,7 @@ NavMeshAgent:
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
+  m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
@@ -922,7 +922,7 @@ OffMeshLink:
   m_GameObject: {fileID: 1602530172}
   m_Enabled: 1
   serializedVersion: 3
-  m_AreaIndex: 0
+  m_AreaIndex: 3
   m_AgentTypeID: 0
   m_Start: {fileID: 1250374970}
   m_End: {fileID: 2088665831}

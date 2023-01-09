@@ -40,7 +40,7 @@ public class Nav_Move : MonoBehaviour
             //목표 위치와 내 위치의 거리가 0.1 미만일때 (도착했을때)
             if (Vector3.Distance(nav.destination,transform.position)<0.1f)
             {
-                //내위치를 목표위피로 설정
+                //내위치를 목표위치로 설정
                 transform.position = nav.destination;
                 //SetDestination에 의해 설정된 경로를 초기화 
                 nav.ResetPath();
